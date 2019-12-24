@@ -22,7 +22,6 @@ function Save(){
 
 
 function Show(e){
-  debugger
     let result = members[e.currentTarget.id];
     result = result.replace(/,/g, " ");
     document.getElementById('exhibit').innerHTML = result;
