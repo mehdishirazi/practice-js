@@ -14,10 +14,16 @@ function Save(){
     membersBtn.id = idNumber;
     membersBtn.innerHTML = 'Member' + idNumber;
     document.getElementById(membersBtn.id).onclick = Show;
+    document.getElementById('name').value = null;
+    document.getElementById('lastName').value = null;
+    document.getElementById('age').value = null;
+    document.getElementById('birthday').value = null;
 }
 
 
 function Show(e){
   debugger
     let result = members[e.currentTarget.id];
+    result = result.replace(/,/g, " ");
+    document.getElementById('exhibit').innerHTML = result;
 }
