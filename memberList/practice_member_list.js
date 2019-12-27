@@ -57,5 +57,17 @@ function ShowingMembers(e){
     let whichMember = e.currentTarget.id; 
     whichMember = whichMember.slice(6);
     whichMember = parseFloat(whichMember) - 1;
-    document.getElementById('exhibit').innerHTML = names[whichMmember];
+    let namePara = document.createElement('P');
+    let lastNamePara = document.createElement('P');
+    let agePara = document.createElement('P');
+    let birthdayPara = document.createElement('P');
+    document.getElementById('exhibit').appendChild(namePara);
+    document.getElementById('exhibit').appendChild(lastNamePara);
+    document.getElementById('exhibit').appendChild(agePara);
+    document.getElementById('exhibit').appendChild(birthdayPara);
+    namePara.innerHTML = names[whichMember];
+    lastNamePara.innerHTML = lastName[whichMember];
+    agePara.innerHTML = age[whichMember];
+    birthdayPara.innerHTML = birthday[whichMember];
 }
+
