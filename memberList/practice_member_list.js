@@ -53,7 +53,6 @@ function Reset(){
 
 
 function ShowingMembers(e){
-  debugger
     let whichMember = e.currentTarget.id; 
     whichMember = whichMember.slice(6);
     whichMember = parseFloat(whichMember) - 1;
